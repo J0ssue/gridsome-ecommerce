@@ -1,0 +1,37 @@
+.jGrid {
+    max-width: 1200px;
+}
+
+.fade-enter-active {
+    transition: opacity 0.5s;
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.custom-shadow {
+    box-shadow: 9px 3px 8px -9px rgba(0, 0, 0, 0.58);
+}
+
+.custom-transition {
+    transition: 0.2s ease-in-out;
+}
+
+.focus-none:focus {
+    outline: none;
+}
+
+.text-white-trans {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.cstm-scale {
+    transform: scale(1.2);
+}
+
+.focus-outline-none {
+    &:focus {
+        outline: none;
+    }
+}

@@ -1,0 +1,23 @@
+.tooltip {
+    visibility: hidden;
+    width: 57px;
+    background-color: #ff7455;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: -238%;
+    left: 50%;
+    margin-left: -29px;
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-visible {
+    visibility: visible;
+    opacity: 1;
+}
