@@ -78,6 +78,7 @@
 					</div>
 					<button
 						class="custom-transition px-6 border border-jOrange rounded hover:bg-orange-600 bg-jOrange text-white ml-10 focus-outline-none"
+						@click="login"
 					>
 						SIGN IN
 					</button>
@@ -136,6 +137,8 @@
 <script>
 	import { setTimeout } from "timers";
 	import { mapGetters, mapActions } from "vuex";
+	import repositories from "../repositories/RepositoryFactory";
+	const { RepositoryFactory } = repositories;
 
 	export default {
 		name: "DefaultLayout",
@@ -149,6 +152,14 @@
 		},
 
 		methods: {
+			async login() {
+				let { data } = await RepositoryFactory.store("login", {
+					email: "josue+1@gmail.coom",
+					password: "josue123"
+				});
+				console.log("login.::::: ", data);
+			},
+
 			toggle(element) {
 				if (element === "showSearchInput") {
 					this[element] = !this[element];

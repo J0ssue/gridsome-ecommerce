@@ -30,4 +30,9 @@ export default function(Vue, { router, head, isClient, appOptions }) {
   head.script.push({
     src: "https://js.stripe.com/v3/",
   });
+  // Add a meta tag
+  head.meta.push({
+    name: 'csrf-token',
+    content: '{{ csrf_token() }}'
+  })
 }
